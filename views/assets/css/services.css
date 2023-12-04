@@ -1,0 +1,76 @@
+body {
+    background-color: #191919;
+}
+.coord{
+    position: relative;
+}
+.mainDibba {
+    margin-top:35px;
+    /* border: 1px solid white; */
+    width: 200px;
+    border-radius: 5px;
+    position: sticky;
+}
+
+.s {
+    width: 100%;
+  margin-top: 10px;
+
+}
+
+.v {
+    color: white;
+}
+
+.head {
+    letter-spacing: 2px;
+    color: red;
+}
+
+
+.msg{
+    font-weight: 500px;
+    color: white;
+    margin-top:25px;
+}
+
+hr{
+    color: white;
+    width: 100%;
+}
+
+.lists {
+    color :white;
+    list-style-type: none;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.lists a {
+    color :white;
+}
+
+#showmo{
+    color: red;
+    
+    margin-top: 10px;
+}
+
+.req{
+    position: sticky;
+    top: 120px;
+    z-index: 99;
+
+}
+
+.k{
+    color: white;
+}
+
+.auth{
+    margin-left: 10px;
+}

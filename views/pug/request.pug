@@ -1,0 +1,89 @@
+extends ./componants/base.pug 
+
+block title 
+    title Services
+
+block link
+    style
+        include ./../assets/css/services.css
+block nav 
+    include ./componants/navbar.pug
+    include ./componants/secondaryNavBar.pug
+
+
+block content
+    //- if(showinfo)
+    //-     .alert.alert-success(role='alert')
+    //-         |   #{infomessage}
+        //- block script
+        //-     script
+        //-         include ./../assets/js/other.js
+
+    .container.m-3.position-sticky.req
+        .row 
+            .col-md-4 
+                a.btn.btn-outline-info(href="/bookshop/bookrequest") Request For Book
+            .col-md-4 
+                a.btn.btn-outline-warning(href="/bookshop/projectrequest") Request For Project
+        
+        hr
+
+    
+    .container.m-3 
+        .row 
+            .col-md-6 
+                h3#showmo Requested Books
+                if (requests)
+                    if (requests.bookrequest)
+                        each val ,index in requests.bookrequest 
+                            details.k 
+                                summary #{index +1 } - #{val.title}
+                                p 
+                                p.auth Author : #{val.aurthor}
+                                p.auth Language : #{val.language}
+                                p.auth Book Type :   #{val.booktype}
+                                p.auth Description : #{val.description}
+                                p.auth  Date : #{val.dateofreq}
+                                p.auth Request id : #{val._id}
+                                .container 
+                                    .row 
+                                        .col-md-6 
+                                            a(href="") Delete Request 
+                                        .col-md-6 
+                                            a(href="") Got The Book
+
+
+
+
+                else
+
+                    li.k NO Books Available
+              
+                    
+            .col-md-6 
+                h3#showmo Requested Projects
+                if (requests)
+                    if (requests.projectrequest)
+                        each val ,index in requests.projectrequest 
+                            details.k 
+                                summary #{index +1 } - #{val.title}
+                                p 
+                             
+                            
+                                p.auth Elements : #{val.elements}
+                                p.auth Description : #{val.description}
+                                p.auth  Date : #{val.dateofreq}
+                                p.auth Request id : #{val._id}
+                                .container 
+                                    .row 
+                                        .col-md-6 
+                                            a(href="") Delete Request 
+                                        .col-md-6 
+                                            a(href="") Got the Project
+
+
+
+                else
+
+                  
+                    li.k No Projects Available

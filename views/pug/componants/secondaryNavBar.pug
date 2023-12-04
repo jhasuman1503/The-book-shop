@@ -1,0 +1,21 @@
+style 
+    include ./../../assets/css/secondaryNavBar.css
+
+.container-fluid.secnav
+    li.nav-item.dropdown.limain
+        a#navbarDropdownMenuLink.nav-link.dropdown-toggle.username(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            i.fas.fa-user 
+            |   #{username}
+        ul.dropdown-menu.drpbg(aria-labelledby='navbarDropdownMenuLink')
+            for i , j in navTexts 
+
+                li
+                    a.dropdown-item(href= i) #{j}
+            //- li
+            //-     a.dropdown-item(href='#') Another action
+            //- li
+            //-     a.dropdown-item(href='#') Something else here
+    
+
+
+//- navTexts will be a object of text and their link pair pass it when you render the pug file with same name 'navTexts'
